@@ -1,0 +1,2279 @@
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://ap.sony.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://ap.sony.com/">
+<wsdl:types>
+<s:schema elementFormDefault="qualified" targetNamespace="http://ap.sony.com/">
+<s:element name="funRFC">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="RFCName" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="TableName" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="funRFCResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="funRFCResult">
+<s:complexType>
+<s:sequence>
+<s:element ref="s:schema"/>
+<s:any/>
+</s:sequence>
+</s:complexType>
+</s:element>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="MatPrice_Old">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="MatCode" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="MatPrice_OldResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="MatPrice_OldResult" type="tns:ArrayOfString"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:complexType name="ArrayOfString">
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string"/>
+</s:sequence>
+</s:complexType>
+<s:element name="MatDesc">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="MatCode" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="MatDescResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="MatDescResult" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="CreateSO">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="SoldToParty" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="ShipToParty" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="DistChnl" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Div" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="SalesOrg" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="PONum" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="PODate" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="strMaterials" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="OrdrType" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="City" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="OrdReason" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="CreateSOResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="CreateSOResult" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="CreateSO1">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="SoldToParty" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="ShipToParty" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="DistChnl" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Div" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="SalesOrg" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="PONum" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="PODate" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="tblMatQty">
+<s:complexType>
+<s:sequence>
+<s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax"/>
+<s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element minOccurs="0" maxOccurs="1" name="OrdrType" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="City" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="OrdReason" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="CreateSO1Response">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="CreateSO1Result">
+<s:complexType>
+<s:sequence>
+<s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax"/>
+<s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="SimulatePO">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="POData">
+<s:complexType>
+<s:sequence>
+<s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax"/>
+<s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="SimulatePOResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="SimulatePOResult">
+<s:complexType>
+<s:sequence>
+<s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax"/>
+<s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="COGSANDTAX">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="MatCode" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Plant" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Region" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="COGSANDTAXResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="COGSANDTAXResult" type="tns:ArrayOfString"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="MatPriceWithTAXCOGS">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="MatCode" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Plant" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Region" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="MatPriceWithTAXCOGSResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="MatPriceWithTAXCOGSResult" type="tns:ArrayOfString"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="MatWarr">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="MatCode" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="MatWarrResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="MatWarrResult" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="DemoReport">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="Empcode" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="DemoReportResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="DemoReportResult">
+<s:complexType>
+<s:sequence>
+<s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax"/>
+<s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="MatPriceNewPlant">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="MatCode" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Plant" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="MatPriceNewPlantResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="MatPriceNewPlantResult" type="tns:ArrayOfString"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="UploadSO">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="SOData">
+<s:complexType>
+<s:sequence>
+<s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax"/>
+<s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element minOccurs="0" maxOccurs="1" name="UserID" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="UploadSOResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="UploadSOResult">
+<s:complexType>
+<s:sequence>
+<s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax"/>
+<s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="MaterialAvailability">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="MatCode" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Plant" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="StorageLoc" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="MaterialAvailabilityResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="MaterialAvailabilityResult" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="CreateSO_ServExch">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="SoldToParty" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="ShipToParty" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="DistChnl" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Div" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="PONum" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="PODate" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="strMaterial" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="OrdrType" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="OrdReason" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Disc" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="CondType" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="CustName" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="CustAdd" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="BillQty" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="StorageLoc" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="CreateSO_ServExchResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="CreateSO_ServExchResult" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="BrazarVoice">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="dateto" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="BrazarVoiceResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="BrazarVoiceResult">
+<s:complexType>
+<s:sequence>
+<s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax"/>
+<s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="CreateSO_ServExchRet">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="SoldToParty" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="ShipToParty" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="DistChnl" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Div" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="PONum" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="PODate" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="strMaterial" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="OrdrType" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="OrdReason" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Disc" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="CondType" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="CustName" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="CustAdd" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="RetSerNum" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="BillQty" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="StorageLoc" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="CreateSO_ServExchRetResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="CreateSO_ServExchRetResult" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="CustomerData">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="CustomerNo" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="CustomerDataResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="CustomerDataResult">
+<s:complexType>
+<s:sequence>
+<s:element ref="s:schema"/>
+<s:any/>
+</s:sequence>
+</s:complexType>
+</s:element>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="Create_CustomerNew">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="dt">
+<s:complexType>
+<s:sequence>
+<s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax"/>
+<s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="Create_CustomerNewResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="Create_CustomerNewResult" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="UpdateData_ServExch">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="DocNo" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="DocType" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="UpdateData_ServExchResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="UpdateData_ServExchResult" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="CreateSO_Replenishment">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="BillingData">
+<s:complexType>
+<s:sequence>
+<s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax"/>
+<s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="CreateSO_ReplenishmentResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="CreateSO_ReplenishmentResult">
+<s:complexType>
+<s:sequence>
+<s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax"/>
+<s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="SimulatePORep">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="SoldToParty" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="ShipToParty" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="MatCode" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Qty" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="DistChnl" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="DocType" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Div" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="SalesOrg" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="SimulatePORepResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="SimulatePORepResult" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="CreateSO_BType">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="BillingData">
+<s:complexType>
+<s:sequence>
+<s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax"/>
+<s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="CreateSO_BTypeResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="CreateSO_BTypeResult">
+<s:complexType>
+<s:sequence>
+<s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax"/>
+<s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="ExtractSerialNum">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="StrtDate" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="EndDate" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="DocCat" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Div" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="ExtractSerialNumResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="ExtractSerialNumResult">
+<s:complexType>
+<s:sequence>
+<s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax"/>
+<s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="GetDistChnl">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="InvNo" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="GetDistChnlResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="GetDistChnlResult" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="Update_MIGO_DTLS">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="Dt">
+<s:complexType>
+<s:sequence>
+<s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax"/>
+<s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="Update_MIGO_DTLSResponse">
+<s:complexType/>
+</s:element>
+<s:element name="GetMigoDetails">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="1" maxOccurs="1" name="NoOfDays" type="s:int"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="GetMigoDetailsResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="GetMigoDetailsResult">
+<s:complexType>
+<s:sequence>
+<s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax"/>
+<s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="SaveZtmmDetails">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="SaveZtmmDetailsResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="SaveZtmmDetailsResult">
+<s:complexType>
+<s:sequence>
+<s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax"/>
+<s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="GetZttsdDetails">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="GetZttsdDetailsResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="GetZttsdDetailsResult">
+<s:complexType>
+<s:sequence>
+<s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax"/>
+<s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="MatPrice">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="MatCode" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="MatPriceResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="MatPriceResult" type="tns:ArrayOfString"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="GetInvDtls">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="DocNo" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="GetInvDtlsResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="GetInvDtlsResult" type="tns:ArrayOfArrayOfString"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:complexType name="ArrayOfArrayOfString">
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="unbounded" name="ArrayOfString" nillable="true" type="tns:ArrayOfString"/>
+</s:sequence>
+</s:complexType>
+<s:element name="GetInvSerNum">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="DelvNo" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="ItemNo" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="GetInvSerNumResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="GetInvSerNumResult">
+<s:complexType>
+<s:sequence>
+<s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax"/>
+<s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="ExtWarrDetailsForPOS">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="Date" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="BillingType" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="ExtWarrDetailsForPOSResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="ExtWarrDetailsForPOSResult">
+<s:complexType>
+<s:sequence>
+<s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax"/>
+<s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="CreateSO_FestiveBilling">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="SoldToParty" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="EmployeeCode" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="DistChnl" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Div" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="PONum" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="PODate" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="strMaterial" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="OrdrType" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="OrdReason" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="CustName" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="CustAdd" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="BillQty" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="StorageLoc" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="CreateSO_FestiveBillingResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="CreateSO_FestiveBillingResult" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="GetWarrDate">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="MatNo" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="SerNr" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="GetWarrDateResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="GetWarrDateResult" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="CreateDebitMemo">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="SoldToParty" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="ShipToParty" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="DistChnl" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Div" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="PONum" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="PODate" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="strMaterial" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="OrdrType" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="OrdReason" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Disc" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="CondType" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="CustName" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="CustAdd" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="BillQty" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="StorageLoc" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="CreateDebitMemoResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="CreateDebitMemoResult" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="ExtWarrSales">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="BillingDate" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="BillingType" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="MatCode" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="ItemNo" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="ExtWarrSalesResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="ExtWarrSalesResult">
+<s:complexType>
+<s:sequence>
+<s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax"/>
+<s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="GetSAPIDDetails">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="GetSAPIDDetailsResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="GetSAPIDDetailsResult">
+<s:complexType>
+<s:sequence>
+<s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax"/>
+<s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="UpdateUserValidity">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="ID" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="ValidTillDt" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="UpdateUserValidityResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="UpdateUserValidityResult" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="GetIMEIDtls1">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="IMEINo" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="GetIMEIDtls1Response">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="GetIMEIDtls1Result" type="tns:ArrayOfString"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="GetIMEIDtls">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="IMEINo" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="GetIMEIDtlsResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="GetIMEIDtlsResult" type="tns:ArrayOfString"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="GetSerNoDtls">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="SerNo" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="ProdCode" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="GetSerNoDtlsResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="GetSerNoDtlsResult" type="tns:ArrayOfString"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="GetTAXChanges">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="Date" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="GetTAXChangesResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="GetTAXChangesResult">
+<s:complexType>
+<s:sequence>
+<s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax"/>
+<s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="CreateSO_DiwaliBilling">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="SoldToParty" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="EmployeeCode" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="DistChnl" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Div" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="PONum" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="PODate" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="strMaterial" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="OrdrType" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="OrdReason" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="CustName" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="CustAdd" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="PymtMode" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="BankName" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="ChqNo" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="GLCode" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="BusinessArea" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="AssignNo" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Amt" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="BillQty" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="StorageLoc" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="CreateSO_DiwaliBillingResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="CreateSO_DiwaliBillingResult" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="ParkAccDocChq">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="BankName" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="FiscYear" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="ChqNo" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="EmpName" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="City" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="GLAccount" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="BusinessArea" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="AssignNo" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="EmpCode" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="SoldToParty" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Amt" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="StorageLoc" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="ParkAccDocChqResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="ParkAccDocChqResult" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="ParkAccDocEMI">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="BankName" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="FiscYear" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="ChqNo" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="EmpName" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="City" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="GLAccount" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="BusinessArea" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="AssignNo" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="EmpCode" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="SoldToParty" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Amt" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="StorageLoc" type="s:string"/>
+<s:element minOccurs="0" maxOccurs="1" name="Servr" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+<s:element name="ParkAccDocEMIResponse">
+<s:complexType>
+<s:sequence>
+<s:element minOccurs="0" maxOccurs="1" name="ParkAccDocEMIResult" type="s:string"/>
+</s:sequence>
+</s:complexType>
+</s:element>
+</s:schema>
+</wsdl:types>
+<wsdl:message name="funRFCSoapIn">
+<wsdl:part name="parameters" element="tns:funRFC"/>
+</wsdl:message>
+<wsdl:message name="funRFCSoapOut">
+<wsdl:part name="parameters" element="tns:funRFCResponse"/>
+</wsdl:message>
+<wsdl:message name="MatPrice_OldSoapIn">
+<wsdl:part name="parameters" element="tns:MatPrice_Old"/>
+</wsdl:message>
+<wsdl:message name="MatPrice_OldSoapOut">
+<wsdl:part name="parameters" element="tns:MatPrice_OldResponse"/>
+</wsdl:message>
+<wsdl:message name="MatDescSoapIn">
+<wsdl:part name="parameters" element="tns:MatDesc"/>
+</wsdl:message>
+<wsdl:message name="MatDescSoapOut">
+<wsdl:part name="parameters" element="tns:MatDescResponse"/>
+</wsdl:message>
+<wsdl:message name="CreateSOSoapIn">
+<wsdl:part name="parameters" element="tns:CreateSO"/>
+</wsdl:message>
+<wsdl:message name="CreateSOSoapOut">
+<wsdl:part name="parameters" element="tns:CreateSOResponse"/>
+</wsdl:message>
+<wsdl:message name="CreateSO1SoapIn">
+<wsdl:part name="parameters" element="tns:CreateSO1"/>
+</wsdl:message>
+<wsdl:message name="CreateSO1SoapOut">
+<wsdl:part name="parameters" element="tns:CreateSO1Response"/>
+</wsdl:message>
+<wsdl:message name="SimulatePOSoapIn">
+<wsdl:part name="parameters" element="tns:SimulatePO"/>
+</wsdl:message>
+<wsdl:message name="SimulatePOSoapOut">
+<wsdl:part name="parameters" element="tns:SimulatePOResponse"/>
+</wsdl:message>
+<wsdl:message name="COGSANDTAXSoapIn">
+<wsdl:part name="parameters" element="tns:COGSANDTAX"/>
+</wsdl:message>
+<wsdl:message name="COGSANDTAXSoapOut">
+<wsdl:part name="parameters" element="tns:COGSANDTAXResponse"/>
+</wsdl:message>
+<wsdl:message name="MatPriceWithTAXCOGSSoapIn">
+<wsdl:part name="parameters" element="tns:MatPriceWithTAXCOGS"/>
+</wsdl:message>
+<wsdl:message name="MatPriceWithTAXCOGSSoapOut">
+<wsdl:part name="parameters" element="tns:MatPriceWithTAXCOGSResponse"/>
+</wsdl:message>
+<wsdl:message name="MatWarrSoapIn">
+<wsdl:part name="parameters" element="tns:MatWarr"/>
+</wsdl:message>
+<wsdl:message name="MatWarrSoapOut">
+<wsdl:part name="parameters" element="tns:MatWarrResponse"/>
+</wsdl:message>
+<wsdl:message name="DemoReportSoapIn">
+<wsdl:part name="parameters" element="tns:DemoReport"/>
+</wsdl:message>
+<wsdl:message name="DemoReportSoapOut">
+<wsdl:part name="parameters" element="tns:DemoReportResponse"/>
+</wsdl:message>
+<wsdl:message name="MatPriceNewPlantSoapIn">
+<wsdl:part name="parameters" element="tns:MatPriceNewPlant"/>
+</wsdl:message>
+<wsdl:message name="MatPriceNewPlantSoapOut">
+<wsdl:part name="parameters" element="tns:MatPriceNewPlantResponse"/>
+</wsdl:message>
+<wsdl:message name="UploadSOSoapIn">
+<wsdl:part name="parameters" element="tns:UploadSO"/>
+</wsdl:message>
+<wsdl:message name="UploadSOSoapOut">
+<wsdl:part name="parameters" element="tns:UploadSOResponse"/>
+</wsdl:message>
+<wsdl:message name="MaterialAvailabilitySoapIn">
+<wsdl:part name="parameters" element="tns:MaterialAvailability"/>
+</wsdl:message>
+<wsdl:message name="MaterialAvailabilitySoapOut">
+<wsdl:part name="parameters" element="tns:MaterialAvailabilityResponse"/>
+</wsdl:message>
+<wsdl:message name="CreateSO_ServExchSoapIn">
+<wsdl:part name="parameters" element="tns:CreateSO_ServExch"/>
+</wsdl:message>
+<wsdl:message name="CreateSO_ServExchSoapOut">
+<wsdl:part name="parameters" element="tns:CreateSO_ServExchResponse"/>
+</wsdl:message>
+<wsdl:message name="BrazarVoiceSoapIn">
+<wsdl:part name="parameters" element="tns:BrazarVoice"/>
+</wsdl:message>
+<wsdl:message name="BrazarVoiceSoapOut">
+<wsdl:part name="parameters" element="tns:BrazarVoiceResponse"/>
+</wsdl:message>
+<wsdl:message name="CreateSO_ServExchRetSoapIn">
+<wsdl:part name="parameters" element="tns:CreateSO_ServExchRet"/>
+</wsdl:message>
+<wsdl:message name="CreateSO_ServExchRetSoapOut">
+<wsdl:part name="parameters" element="tns:CreateSO_ServExchRetResponse"/>
+</wsdl:message>
+<wsdl:message name="CustomerDataSoapIn">
+<wsdl:part name="parameters" element="tns:CustomerData"/>
+</wsdl:message>
+<wsdl:message name="CustomerDataSoapOut">
+<wsdl:part name="parameters" element="tns:CustomerDataResponse"/>
+</wsdl:message>
+<wsdl:message name="Create_CustomerNewSoapIn">
+<wsdl:part name="parameters" element="tns:Create_CustomerNew"/>
+</wsdl:message>
+<wsdl:message name="Create_CustomerNewSoapOut">
+<wsdl:part name="parameters" element="tns:Create_CustomerNewResponse"/>
+</wsdl:message>
+<wsdl:message name="UpdateData_ServExchSoapIn">
+<wsdl:part name="parameters" element="tns:UpdateData_ServExch"/>
+</wsdl:message>
+<wsdl:message name="UpdateData_ServExchSoapOut">
+<wsdl:part name="parameters" element="tns:UpdateData_ServExchResponse"/>
+</wsdl:message>
+<wsdl:message name="CreateSO_ReplenishmentSoapIn">
+<wsdl:part name="parameters" element="tns:CreateSO_Replenishment"/>
+</wsdl:message>
+<wsdl:message name="CreateSO_ReplenishmentSoapOut">
+<wsdl:part name="parameters" element="tns:CreateSO_ReplenishmentResponse"/>
+</wsdl:message>
+<wsdl:message name="SimulatePORepSoapIn">
+<wsdl:part name="parameters" element="tns:SimulatePORep"/>
+</wsdl:message>
+<wsdl:message name="SimulatePORepSoapOut">
+<wsdl:part name="parameters" element="tns:SimulatePORepResponse"/>
+</wsdl:message>
+<wsdl:message name="CreateSO_BTypeSoapIn">
+<wsdl:part name="parameters" element="tns:CreateSO_BType"/>
+</wsdl:message>
+<wsdl:message name="CreateSO_BTypeSoapOut">
+<wsdl:part name="parameters" element="tns:CreateSO_BTypeResponse"/>
+</wsdl:message>
+<wsdl:message name="ExtractSerialNumSoapIn">
+<wsdl:part name="parameters" element="tns:ExtractSerialNum"/>
+</wsdl:message>
+<wsdl:message name="ExtractSerialNumSoapOut">
+<wsdl:part name="parameters" element="tns:ExtractSerialNumResponse"/>
+</wsdl:message>
+<wsdl:message name="GetDistChnlSoapIn">
+<wsdl:part name="parameters" element="tns:GetDistChnl"/>
+</wsdl:message>
+<wsdl:message name="GetDistChnlSoapOut">
+<wsdl:part name="parameters" element="tns:GetDistChnlResponse"/>
+</wsdl:message>
+<wsdl:message name="Update_MIGO_DTLSSoapIn">
+<wsdl:part name="parameters" element="tns:Update_MIGO_DTLS"/>
+</wsdl:message>
+<wsdl:message name="Update_MIGO_DTLSSoapOut">
+<wsdl:part name="parameters" element="tns:Update_MIGO_DTLSResponse"/>
+</wsdl:message>
+<wsdl:message name="GetMigoDetailsSoapIn">
+<wsdl:part name="parameters" element="tns:GetMigoDetails"/>
+</wsdl:message>
+<wsdl:message name="GetMigoDetailsSoapOut">
+<wsdl:part name="parameters" element="tns:GetMigoDetailsResponse"/>
+</wsdl:message>
+<wsdl:message name="SaveZtmmDetailsSoapIn">
+<wsdl:part name="parameters" element="tns:SaveZtmmDetails"/>
+</wsdl:message>
+<wsdl:message name="SaveZtmmDetailsSoapOut">
+<wsdl:part name="parameters" element="tns:SaveZtmmDetailsResponse"/>
+</wsdl:message>
+<wsdl:message name="GetZttsdDetailsSoapIn">
+<wsdl:part name="parameters" element="tns:GetZttsdDetails"/>
+</wsdl:message>
+<wsdl:message name="GetZttsdDetailsSoapOut">
+<wsdl:part name="parameters" element="tns:GetZttsdDetailsResponse"/>
+</wsdl:message>
+<wsdl:message name="MatPriceSoapIn">
+<wsdl:part name="parameters" element="tns:MatPrice"/>
+</wsdl:message>
+<wsdl:message name="MatPriceSoapOut">
+<wsdl:part name="parameters" element="tns:MatPriceResponse"/>
+</wsdl:message>
+<wsdl:message name="GetInvDtlsSoapIn">
+<wsdl:part name="parameters" element="tns:GetInvDtls"/>
+</wsdl:message>
+<wsdl:message name="GetInvDtlsSoapOut">
+<wsdl:part name="parameters" element="tns:GetInvDtlsResponse"/>
+</wsdl:message>
+<wsdl:message name="GetInvSerNumSoapIn">
+<wsdl:part name="parameters" element="tns:GetInvSerNum"/>
+</wsdl:message>
+<wsdl:message name="GetInvSerNumSoapOut">
+<wsdl:part name="parameters" element="tns:GetInvSerNumResponse"/>
+</wsdl:message>
+<wsdl:message name="ExtWarrDetailsForPOSSoapIn">
+<wsdl:part name="parameters" element="tns:ExtWarrDetailsForPOS"/>
+</wsdl:message>
+<wsdl:message name="ExtWarrDetailsForPOSSoapOut">
+<wsdl:part name="parameters" element="tns:ExtWarrDetailsForPOSResponse"/>
+</wsdl:message>
+<wsdl:message name="CreateSO_FestiveBillingSoapIn">
+<wsdl:part name="parameters" element="tns:CreateSO_FestiveBilling"/>
+</wsdl:message>
+<wsdl:message name="CreateSO_FestiveBillingSoapOut">
+<wsdl:part name="parameters" element="tns:CreateSO_FestiveBillingResponse"/>
+</wsdl:message>
+<wsdl:message name="GetWarrDateSoapIn">
+<wsdl:part name="parameters" element="tns:GetWarrDate"/>
+</wsdl:message>
+<wsdl:message name="GetWarrDateSoapOut">
+<wsdl:part name="parameters" element="tns:GetWarrDateResponse"/>
+</wsdl:message>
+<wsdl:message name="CreateDebitMemoSoapIn">
+<wsdl:part name="parameters" element="tns:CreateDebitMemo"/>
+</wsdl:message>
+<wsdl:message name="CreateDebitMemoSoapOut">
+<wsdl:part name="parameters" element="tns:CreateDebitMemoResponse"/>
+</wsdl:message>
+<wsdl:message name="ExtWarrSalesSoapIn">
+<wsdl:part name="parameters" element="tns:ExtWarrSales"/>
+</wsdl:message>
+<wsdl:message name="ExtWarrSalesSoapOut">
+<wsdl:part name="parameters" element="tns:ExtWarrSalesResponse"/>
+</wsdl:message>
+<wsdl:message name="GetSAPIDDetailsSoapIn">
+<wsdl:part name="parameters" element="tns:GetSAPIDDetails"/>
+</wsdl:message>
+<wsdl:message name="GetSAPIDDetailsSoapOut">
+<wsdl:part name="parameters" element="tns:GetSAPIDDetailsResponse"/>
+</wsdl:message>
+<wsdl:message name="UpdateUserValiditySoapIn">
+<wsdl:part name="parameters" element="tns:UpdateUserValidity"/>
+</wsdl:message>
+<wsdl:message name="UpdateUserValiditySoapOut">
+<wsdl:part name="parameters" element="tns:UpdateUserValidityResponse"/>
+</wsdl:message>
+<wsdl:message name="GetIMEIDtls1SoapIn">
+<wsdl:part name="parameters" element="tns:GetIMEIDtls1"/>
+</wsdl:message>
+<wsdl:message name="GetIMEIDtls1SoapOut">
+<wsdl:part name="parameters" element="tns:GetIMEIDtls1Response"/>
+</wsdl:message>
+<wsdl:message name="GetIMEIDtlsSoapIn">
+<wsdl:part name="parameters" element="tns:GetIMEIDtls"/>
+</wsdl:message>
+<wsdl:message name="GetIMEIDtlsSoapOut">
+<wsdl:part name="parameters" element="tns:GetIMEIDtlsResponse"/>
+</wsdl:message>
+<wsdl:message name="GetSerNoDtlsSoapIn">
+<wsdl:part name="parameters" element="tns:GetSerNoDtls"/>
+</wsdl:message>
+<wsdl:message name="GetSerNoDtlsSoapOut">
+<wsdl:part name="parameters" element="tns:GetSerNoDtlsResponse"/>
+</wsdl:message>
+<wsdl:message name="GetTAXChangesSoapIn">
+<wsdl:part name="parameters" element="tns:GetTAXChanges"/>
+</wsdl:message>
+<wsdl:message name="GetTAXChangesSoapOut">
+<wsdl:part name="parameters" element="tns:GetTAXChangesResponse"/>
+</wsdl:message>
+<wsdl:message name="CreateSO_DiwaliBillingSoapIn">
+<wsdl:part name="parameters" element="tns:CreateSO_DiwaliBilling"/>
+</wsdl:message>
+<wsdl:message name="CreateSO_DiwaliBillingSoapOut">
+<wsdl:part name="parameters" element="tns:CreateSO_DiwaliBillingResponse"/>
+</wsdl:message>
+<wsdl:message name="ParkAccDocChqSoapIn">
+<wsdl:part name="parameters" element="tns:ParkAccDocChq"/>
+</wsdl:message>
+<wsdl:message name="ParkAccDocChqSoapOut">
+<wsdl:part name="parameters" element="tns:ParkAccDocChqResponse"/>
+</wsdl:message>
+<wsdl:message name="ParkAccDocEMISoapIn">
+<wsdl:part name="parameters" element="tns:ParkAccDocEMI"/>
+</wsdl:message>
+<wsdl:message name="ParkAccDocEMISoapOut">
+<wsdl:part name="parameters" element="tns:ParkAccDocEMIResponse"/>
+</wsdl:message>
+<wsdl:portType name="SIDSoap">
+<wsdl:operation name="funRFC">
+<wsdl:input message="tns:funRFCSoapIn"/>
+<wsdl:output message="tns:funRFCSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="MatPrice_Old">
+<wsdl:input message="tns:MatPrice_OldSoapIn"/>
+<wsdl:output message="tns:MatPrice_OldSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="MatDesc">
+<wsdl:input message="tns:MatDescSoapIn"/>
+<wsdl:output message="tns:MatDescSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="CreateSO">
+<wsdl:input message="tns:CreateSOSoapIn"/>
+<wsdl:output message="tns:CreateSOSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="CreateSO1">
+<wsdl:input message="tns:CreateSO1SoapIn"/>
+<wsdl:output message="tns:CreateSO1SoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="SimulatePO">
+<wsdl:input message="tns:SimulatePOSoapIn"/>
+<wsdl:output message="tns:SimulatePOSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="COGSANDTAX">
+<wsdl:input message="tns:COGSANDTAXSoapIn"/>
+<wsdl:output message="tns:COGSANDTAXSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="MatPriceWithTAXCOGS">
+<wsdl:input message="tns:MatPriceWithTAXCOGSSoapIn"/>
+<wsdl:output message="tns:MatPriceWithTAXCOGSSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="MatWarr">
+<wsdl:input message="tns:MatWarrSoapIn"/>
+<wsdl:output message="tns:MatWarrSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="DemoReport">
+<wsdl:input message="tns:DemoReportSoapIn"/>
+<wsdl:output message="tns:DemoReportSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="MatPriceNewPlant">
+<wsdl:input message="tns:MatPriceNewPlantSoapIn"/>
+<wsdl:output message="tns:MatPriceNewPlantSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="UploadSO">
+<wsdl:input message="tns:UploadSOSoapIn"/>
+<wsdl:output message="tns:UploadSOSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="MaterialAvailability">
+<wsdl:input message="tns:MaterialAvailabilitySoapIn"/>
+<wsdl:output message="tns:MaterialAvailabilitySoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="CreateSO_ServExch">
+<wsdl:input message="tns:CreateSO_ServExchSoapIn"/>
+<wsdl:output message="tns:CreateSO_ServExchSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="BrazarVoice">
+<wsdl:input message="tns:BrazarVoiceSoapIn"/>
+<wsdl:output message="tns:BrazarVoiceSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="CreateSO_ServExchRet">
+<wsdl:input message="tns:CreateSO_ServExchRetSoapIn"/>
+<wsdl:output message="tns:CreateSO_ServExchRetSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="CustomerData">
+<wsdl:input message="tns:CustomerDataSoapIn"/>
+<wsdl:output message="tns:CustomerDataSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="Create_CustomerNew">
+<wsdl:input message="tns:Create_CustomerNewSoapIn"/>
+<wsdl:output message="tns:Create_CustomerNewSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="UpdateData_ServExch">
+<wsdl:input message="tns:UpdateData_ServExchSoapIn"/>
+<wsdl:output message="tns:UpdateData_ServExchSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="CreateSO_Replenishment">
+<wsdl:input message="tns:CreateSO_ReplenishmentSoapIn"/>
+<wsdl:output message="tns:CreateSO_ReplenishmentSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="SimulatePORep">
+<wsdl:input message="tns:SimulatePORepSoapIn"/>
+<wsdl:output message="tns:SimulatePORepSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="CreateSO_BType">
+<wsdl:input message="tns:CreateSO_BTypeSoapIn"/>
+<wsdl:output message="tns:CreateSO_BTypeSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="ExtractSerialNum">
+<wsdl:input message="tns:ExtractSerialNumSoapIn"/>
+<wsdl:output message="tns:ExtractSerialNumSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="GetDistChnl">
+<wsdl:input message="tns:GetDistChnlSoapIn"/>
+<wsdl:output message="tns:GetDistChnlSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="Update_MIGO_DTLS">
+<wsdl:input message="tns:Update_MIGO_DTLSSoapIn"/>
+<wsdl:output message="tns:Update_MIGO_DTLSSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="GetMigoDetails">
+<wsdl:input message="tns:GetMigoDetailsSoapIn"/>
+<wsdl:output message="tns:GetMigoDetailsSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="SaveZtmmDetails">
+<wsdl:input message="tns:SaveZtmmDetailsSoapIn"/>
+<wsdl:output message="tns:SaveZtmmDetailsSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="GetZttsdDetails">
+<wsdl:input message="tns:GetZttsdDetailsSoapIn"/>
+<wsdl:output message="tns:GetZttsdDetailsSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="MatPrice">
+<wsdl:input message="tns:MatPriceSoapIn"/>
+<wsdl:output message="tns:MatPriceSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="GetInvDtls">
+<wsdl:input message="tns:GetInvDtlsSoapIn"/>
+<wsdl:output message="tns:GetInvDtlsSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="GetInvSerNum">
+<wsdl:input message="tns:GetInvSerNumSoapIn"/>
+<wsdl:output message="tns:GetInvSerNumSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="ExtWarrDetailsForPOS">
+<wsdl:input message="tns:ExtWarrDetailsForPOSSoapIn"/>
+<wsdl:output message="tns:ExtWarrDetailsForPOSSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="CreateSO_FestiveBilling">
+<wsdl:input message="tns:CreateSO_FestiveBillingSoapIn"/>
+<wsdl:output message="tns:CreateSO_FestiveBillingSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="GetWarrDate">
+<wsdl:input message="tns:GetWarrDateSoapIn"/>
+<wsdl:output message="tns:GetWarrDateSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="CreateDebitMemo">
+<wsdl:input message="tns:CreateDebitMemoSoapIn"/>
+<wsdl:output message="tns:CreateDebitMemoSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="ExtWarrSales">
+<wsdl:input message="tns:ExtWarrSalesSoapIn"/>
+<wsdl:output message="tns:ExtWarrSalesSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="GetSAPIDDetails">
+<wsdl:input message="tns:GetSAPIDDetailsSoapIn"/>
+<wsdl:output message="tns:GetSAPIDDetailsSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="UpdateUserValidity">
+<wsdl:input message="tns:UpdateUserValiditySoapIn"/>
+<wsdl:output message="tns:UpdateUserValiditySoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="GetIMEIDtls1">
+<wsdl:input message="tns:GetIMEIDtls1SoapIn"/>
+<wsdl:output message="tns:GetIMEIDtls1SoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="GetIMEIDtls">
+<wsdl:input message="tns:GetIMEIDtlsSoapIn"/>
+<wsdl:output message="tns:GetIMEIDtlsSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="GetSerNoDtls">
+<wsdl:input message="tns:GetSerNoDtlsSoapIn"/>
+<wsdl:output message="tns:GetSerNoDtlsSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="GetTAXChanges">
+<wsdl:input message="tns:GetTAXChangesSoapIn"/>
+<wsdl:output message="tns:GetTAXChangesSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="CreateSO_DiwaliBilling">
+<wsdl:input message="tns:CreateSO_DiwaliBillingSoapIn"/>
+<wsdl:output message="tns:CreateSO_DiwaliBillingSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="ParkAccDocChq">
+<wsdl:input message="tns:ParkAccDocChqSoapIn"/>
+<wsdl:output message="tns:ParkAccDocChqSoapOut"/>
+</wsdl:operation>
+<wsdl:operation name="ParkAccDocEMI">
+<wsdl:input message="tns:ParkAccDocEMISoapIn"/>
+<wsdl:output message="tns:ParkAccDocEMISoapOut"/>
+</wsdl:operation>
+</wsdl:portType>
+<wsdl:binding name="SIDSoap" type="tns:SIDSoap">
+<soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+<wsdl:operation name="funRFC">
+<soap:operation soapAction="http://ap.sony.com/funRFC" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="MatPrice_Old">
+<soap:operation soapAction="http://ap.sony.com/MatPrice_Old" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="MatDesc">
+<soap:operation soapAction="http://ap.sony.com/MatDesc" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="CreateSO">
+<soap:operation soapAction="http://ap.sony.com/CreateSO" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="CreateSO1">
+<soap:operation soapAction="http://ap.sony.com/CreateSO1" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="SimulatePO">
+<soap:operation soapAction="http://ap.sony.com/SimulatePO" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="COGSANDTAX">
+<soap:operation soapAction="http://ap.sony.com/COGSANDTAX" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="MatPriceWithTAXCOGS">
+<soap:operation soapAction="http://ap.sony.com/MatPriceWithTAXCOGS" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="MatWarr">
+<soap:operation soapAction="http://ap.sony.com/MatWarr" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="DemoReport">
+<soap:operation soapAction="http://ap.sony.com/DemoReport" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="MatPriceNewPlant">
+<soap:operation soapAction="http://ap.sony.com/MatPriceNewPlant" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="UploadSO">
+<soap:operation soapAction="http://ap.sony.com/UploadSO" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="MaterialAvailability">
+<soap:operation soapAction="http://ap.sony.com/MaterialAvailability" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="CreateSO_ServExch">
+<soap:operation soapAction="http://ap.sony.com/CreateSO_ServExch" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="BrazarVoice">
+<soap:operation soapAction="http://ap.sony.com/BrazarVoice" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="CreateSO_ServExchRet">
+<soap:operation soapAction="http://ap.sony.com/CreateSO_ServExchRet" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="CustomerData">
+<soap:operation soapAction="http://ap.sony.com/CustomerData" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Create_CustomerNew">
+<soap:operation soapAction="http://ap.sony.com/Create_CustomerNew" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="UpdateData_ServExch">
+<soap:operation soapAction="http://ap.sony.com/UpdateData_ServExch" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="CreateSO_Replenishment">
+<soap:operation soapAction="http://ap.sony.com/CreateSO_Replenishment" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="SimulatePORep">
+<soap:operation soapAction="http://ap.sony.com/SimulatePORep" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="CreateSO_BType">
+<soap:operation soapAction="http://ap.sony.com/CreateSO_BType" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="ExtractSerialNum">
+<soap:operation soapAction="http://ap.sony.com/ExtractSerialNum" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetDistChnl">
+<soap:operation soapAction="http://ap.sony.com/GetDistChnl" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Update_MIGO_DTLS">
+<soap:operation soapAction="http://ap.sony.com/Update_MIGO_DTLS" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetMigoDetails">
+<soap:operation soapAction="http://ap.sony.com/GetMigoDetails" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="SaveZtmmDetails">
+<soap:operation soapAction="http://ap.sony.com/SaveZtmmDetails" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetZttsdDetails">
+<soap:operation soapAction="http://ap.sony.com/GetZttsdDetails" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="MatPrice">
+<soap:operation soapAction="http://ap.sony.com/MatPrice" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetInvDtls">
+<soap:operation soapAction="http://ap.sony.com/GetInvDtls" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetInvSerNum">
+<soap:operation soapAction="http://ap.sony.com/GetInvSerNum" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="ExtWarrDetailsForPOS">
+<soap:operation soapAction="http://ap.sony.com/ExtWarrDetailsForPOS" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="CreateSO_FestiveBilling">
+<soap:operation soapAction="http://ap.sony.com/CreateSO_FestiveBilling" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetWarrDate">
+<soap:operation soapAction="http://ap.sony.com/GetWarrDate" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="CreateDebitMemo">
+<soap:operation soapAction="http://ap.sony.com/CreateDebitMemo" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="ExtWarrSales">
+<soap:operation soapAction="http://ap.sony.com/ExtWarrSales" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetSAPIDDetails">
+<soap:operation soapAction="http://ap.sony.com/GetSAPIDDetails" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="UpdateUserValidity">
+<soap:operation soapAction="http://ap.sony.com/UpdateUserValidity" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetIMEIDtls1">
+<soap:operation soapAction="http://ap.sony.com/GetIMEIDtls1" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetIMEIDtls">
+<soap:operation soapAction="http://ap.sony.com/GetIMEIDtls" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetSerNoDtls">
+<soap:operation soapAction="http://ap.sony.com/GetSerNoDtls" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetTAXChanges">
+<soap:operation soapAction="http://ap.sony.com/GetTAXChanges" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="CreateSO_DiwaliBilling">
+<soap:operation soapAction="http://ap.sony.com/CreateSO_DiwaliBilling" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="ParkAccDocChq">
+<soap:operation soapAction="http://ap.sony.com/ParkAccDocChq" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="ParkAccDocEMI">
+<soap:operation soapAction="http://ap.sony.com/ParkAccDocEMI" style="document"/>
+<wsdl:input>
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+</wsdl:binding>
+<wsdl:binding name="SIDSoap12" type="tns:SIDSoap">
+<soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+<wsdl:operation name="funRFC">
+<soap12:operation soapAction="http://ap.sony.com/funRFC" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="MatPrice_Old">
+<soap12:operation soapAction="http://ap.sony.com/MatPrice_Old" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="MatDesc">
+<soap12:operation soapAction="http://ap.sony.com/MatDesc" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="CreateSO">
+<soap12:operation soapAction="http://ap.sony.com/CreateSO" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="CreateSO1">
+<soap12:operation soapAction="http://ap.sony.com/CreateSO1" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="SimulatePO">
+<soap12:operation soapAction="http://ap.sony.com/SimulatePO" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="COGSANDTAX">
+<soap12:operation soapAction="http://ap.sony.com/COGSANDTAX" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="MatPriceWithTAXCOGS">
+<soap12:operation soapAction="http://ap.sony.com/MatPriceWithTAXCOGS" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="MatWarr">
+<soap12:operation soapAction="http://ap.sony.com/MatWarr" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="DemoReport">
+<soap12:operation soapAction="http://ap.sony.com/DemoReport" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="MatPriceNewPlant">
+<soap12:operation soapAction="http://ap.sony.com/MatPriceNewPlant" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="UploadSO">
+<soap12:operation soapAction="http://ap.sony.com/UploadSO" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="MaterialAvailability">
+<soap12:operation soapAction="http://ap.sony.com/MaterialAvailability" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="CreateSO_ServExch">
+<soap12:operation soapAction="http://ap.sony.com/CreateSO_ServExch" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="BrazarVoice">
+<soap12:operation soapAction="http://ap.sony.com/BrazarVoice" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="CreateSO_ServExchRet">
+<soap12:operation soapAction="http://ap.sony.com/CreateSO_ServExchRet" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="CustomerData">
+<soap12:operation soapAction="http://ap.sony.com/CustomerData" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Create_CustomerNew">
+<soap12:operation soapAction="http://ap.sony.com/Create_CustomerNew" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="UpdateData_ServExch">
+<soap12:operation soapAction="http://ap.sony.com/UpdateData_ServExch" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="CreateSO_Replenishment">
+<soap12:operation soapAction="http://ap.sony.com/CreateSO_Replenishment" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="SimulatePORep">
+<soap12:operation soapAction="http://ap.sony.com/SimulatePORep" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="CreateSO_BType">
+<soap12:operation soapAction="http://ap.sony.com/CreateSO_BType" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="ExtractSerialNum">
+<soap12:operation soapAction="http://ap.sony.com/ExtractSerialNum" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetDistChnl">
+<soap12:operation soapAction="http://ap.sony.com/GetDistChnl" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="Update_MIGO_DTLS">
+<soap12:operation soapAction="http://ap.sony.com/Update_MIGO_DTLS" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetMigoDetails">
+<soap12:operation soapAction="http://ap.sony.com/GetMigoDetails" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="SaveZtmmDetails">
+<soap12:operation soapAction="http://ap.sony.com/SaveZtmmDetails" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetZttsdDetails">
+<soap12:operation soapAction="http://ap.sony.com/GetZttsdDetails" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="MatPrice">
+<soap12:operation soapAction="http://ap.sony.com/MatPrice" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetInvDtls">
+<soap12:operation soapAction="http://ap.sony.com/GetInvDtls" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetInvSerNum">
+<soap12:operation soapAction="http://ap.sony.com/GetInvSerNum" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="ExtWarrDetailsForPOS">
+<soap12:operation soapAction="http://ap.sony.com/ExtWarrDetailsForPOS" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="CreateSO_FestiveBilling">
+<soap12:operation soapAction="http://ap.sony.com/CreateSO_FestiveBilling" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetWarrDate">
+<soap12:operation soapAction="http://ap.sony.com/GetWarrDate" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="CreateDebitMemo">
+<soap12:operation soapAction="http://ap.sony.com/CreateDebitMemo" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="ExtWarrSales">
+<soap12:operation soapAction="http://ap.sony.com/ExtWarrSales" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetSAPIDDetails">
+<soap12:operation soapAction="http://ap.sony.com/GetSAPIDDetails" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="UpdateUserValidity">
+<soap12:operation soapAction="http://ap.sony.com/UpdateUserValidity" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetIMEIDtls1">
+<soap12:operation soapAction="http://ap.sony.com/GetIMEIDtls1" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetIMEIDtls">
+<soap12:operation soapAction="http://ap.sony.com/GetIMEIDtls" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetSerNoDtls">
+<soap12:operation soapAction="http://ap.sony.com/GetSerNoDtls" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="GetTAXChanges">
+<soap12:operation soapAction="http://ap.sony.com/GetTAXChanges" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="CreateSO_DiwaliBilling">
+<soap12:operation soapAction="http://ap.sony.com/CreateSO_DiwaliBilling" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="ParkAccDocChq">
+<soap12:operation soapAction="http://ap.sony.com/ParkAccDocChq" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="ParkAccDocEMI">
+<soap12:operation soapAction="http://ap.sony.com/ParkAccDocEMI" style="document"/>
+<wsdl:input>
+<soap12:body use="literal"/>
+</wsdl:input>
+<wsdl:output>
+<soap12:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+</wsdl:binding>
+<wsdl:service name="SID">
+<wsdl:port name="SIDSoap" binding="tns:SIDSoap">
+<soap:address location="https://IMWebsvc.sony.co.in/SID.asmx"/>
+</wsdl:port>
+<wsdl:port name="SIDSoap12" binding="tns:SIDSoap12">
+<soap12:address location="https://IMWebsvc.sony.co.in/SID.asmx"/>
+</wsdl:port>
+</wsdl:service>
+</wsdl:definitions>
